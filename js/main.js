@@ -11,7 +11,7 @@ function pesquisaFilme(e){
 
 function buscaFilme(filmePesquisa){
 
-    axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=106f07bf&s=' + filmePesquisa)
+    axios.get('https://www.omdbapi.com/?i=tt3896198&apikey=106f07bf&s=' + filmePesquisa)
   .then(function (response) {
     console.log(response);
     var filmes = response.data.Search;
@@ -48,7 +48,7 @@ function filmeDetalhe(id){
 function mostraFilme(){
   var filmeID = sessionStorage.getItem('filmeID');
 
-  axios.get('http://www.omdbapi.com/?=tt3896198&apikey=106f07bf&i=' + filmeID)
+  axios.get('https://www.omdbapi.com/?=tt3896198&apikey=106f07bf&i=' + filmeID)
   .then(function (response) {
     var filme = response.data;
     console.log(filme);
